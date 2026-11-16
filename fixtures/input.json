@@ -1,0 +1,28 @@
+{
+  "basins": [
+    {
+      "id": "north",
+      "cap": 100
+    }
+  ],
+  "claims": [
+    {
+      "id": "farm-a",
+      "basin": "north",
+      "priority": 1,
+      "requested": 80
+    },
+    {
+      "id": "farm-b",
+      "basin": "north",
+      "priority": 1,
+      "requested": 80
+    },
+    {
+      "id": "town",
+      "basin": "north",
+      "priority": 2,
+      "requested": 50
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools==80.9.0", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "data-qd-147"
+version = "0.1.0"
+description = "Priority ordered proportional allocation under basin withdrawal caps"
+requires-python = ">=3.11"
+dependencies = []
+[project.scripts]
+water-rights = "water_rights.cli:main"
+[tool.setuptools.packages.find]
+where = ["src"]
