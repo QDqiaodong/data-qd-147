@@ -27,6 +27,25 @@ python3 -m venv .venv
 src/water_rights/model.py 为业务模型，相关算法模块独立组织；common.py 提供受限JSON及报告发布，
 cli.py 衔接数据链路。fixtures 为明确自制样例，代码与样例采用MIT许可。
 
+## 网络配给与交割（network_cli）
+
+在共享渠道网络中把调度季水权计划落到可追溯的实际交割，详见
+[网络配给数据契约](docs/network_contract.md)。一个SQLite文件即一个输入冻结的调度季账本；
+计划只签发身份不预占水量，交割按实际量重解路由并在同一原子提交内扣减实际源头取水、
+渠道流量与用户量。原 `water-rights` 命令与 v1 结果保持不变。
+
+```sh
+.venv/bin/python -m water_rights.network_cli init --source fixtures/network_input.json --db run/season.db
+.venv/bin/python -m water_rights.network_cli plan --db run/season.db --output run/plan.json
+.venv/bin/python -m water_rights.network_cli settle --db run/season.db --plan run/plan.json \
+    --source fixtures/network_delivery.json --delivery-id D-1 --output run/receipt.json
+.venv/bin/python -m water_rights.network_cli status --db run/season.db --output run/status.json
+```
+
+network_flow.py 为精确字典序网络求解（三次最小费用流，大整数支配权重，不按单位展开），
+network_model.py 为输入契约，network_ledger.py 为SQLite账本（HMAC计划身份、余额版本、
+原子扣账、回执恢复），network_cli.py 衔接命令行。业务错误退出2并保留既有输出与账本。
+
 ## Scope and sample
 # Priority water-right allocation v1
 

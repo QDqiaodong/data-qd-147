@@ -1,0 +1,55 @@
+{
+  "nodes": ["up-a", "up-b", "mid", "down"],
+  "sources": [
+    {
+      "id": "s-a",
+      "node": "up-a",
+      "cap": 40
+    },
+    {
+      "id": "s-b",
+      "node": "up-b",
+      "cap": 30
+    }
+  ],
+  "channels": [
+    {
+      "id": "e1",
+      "from": "up-a",
+      "to": "mid",
+      "cap": 45
+    },
+    {
+      "id": "e2",
+      "from": "up-b",
+      "to": "mid",
+      "cap": 35
+    },
+    {
+      "id": "e3",
+      "from": "mid",
+      "to": "down",
+      "cap": 60
+    }
+  ],
+  "claims": [
+    {
+      "id": "farm-x",
+      "node": "mid",
+      "priority": 1,
+      "requested": 30
+    },
+    {
+      "id": "farm-y",
+      "node": "down",
+      "priority": 1,
+      "requested": 30
+    },
+    {
+      "id": "town",
+      "node": "down",
+      "priority": 2,
+      "requested": 20
+    }
+  ]
+}

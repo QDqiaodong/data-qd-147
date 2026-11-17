@@ -1,0 +1,12 @@
+{
+  "deliveries": [
+    {
+      "claim": "farm-y",
+      "amount": 20
+    },
+    {
+      "claim": "town",
+      "amount": 5
+    }
+  ]
+}

@@ -9,5 +9,6 @@ requires-python = ">=3.11"
 dependencies = []
 [project.scripts]
 water-rights = "water_rights.cli:main"
+water-rights-network = "water_rights.network_cli:main"
 [tool.setuptools.packages.find]
 where = ["src"]
