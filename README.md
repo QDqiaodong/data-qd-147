@@ -46,6 +46,22 @@ network_flow.py 为精确字典序网络求解（三次最小费用流，大整�
 network_model.py 为输入契约，network_ledger.py 为SQLite账本（HMAC计划身份、余额版本、
 原子扣账、回执恢复），network_cli.py 衔接命令行。业务错误退出2并保留既有输出与账本。
 
+## 客户分时水费审计（billing_cli）
+
+独立的客户分时水费审计，从累计表读数与费率表重建账期用量，输出每个客户每个账期
+可行应付金额的精确下界/上界及逐日/时段 kWh 见证。它与网络配给、计划、交割、季节
+余额完全隔离，不读取也不改变任何网络状态，详见[客户分时水费审计契约](docs/billing_contract.md)。
+
+```sh
+python -m water_rights.billing_cli --source fixtures/billing_input.json --output run/billing_report.json
+```
+
+billing_model.py 为受限输入契约与读数规范化（重复折叠、同刻冲突拒绝、一次回卷），
+billing_audit.py 在层状容量族的整数多拟阵基多面体上做边际贪心，跨账期区间在同一
+联合可行域上求解、差额只守恒一次；billing_verify.py 从报告见证独立复算读数守恒、
+周期阶梯量与分时收费；billing_cli.py 衔接命令行。无可行分配或契约违规时退出2且
+保留旧报告，输入输出不得相同、拒绝符号链接输出。
+
 ## Scope and sample
 # Priority water-right allocation v1
 

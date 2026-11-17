@@ -1,0 +1,1350 @@
+{
+  "cycles": [
+    {
+      "customer": "acme",
+      "end": "2026-01-31T00:00Z",
+      "id": "C-1",
+      "start": "2026-01-01T00:00Z",
+      "tiers": [
+        {
+          "price": 10,
+          "threshold": 400
+        },
+        {
+          "price": 14,
+          "threshold": null
+        }
+      ]
+    },
+    {
+      "customer": "acme",
+      "end": "2026-03-02T00:00Z",
+      "id": "C-2",
+      "start": "2026-01-31T00:00Z",
+      "tiers": [
+        {
+          "price": 12,
+          "threshold": 1000
+        },
+        {
+          "price": 20,
+          "threshold": null
+        }
+      ]
+    },
+    {
+      "customer": "beta",
+      "end": "2026-01-31T00:00Z",
+      "id": "C-3",
+      "start": "2026-01-01T00:00Z",
+      "tiers": [
+        {
+          "price": 9,
+          "threshold": 200
+        },
+        {
+          "price": 11,
+          "threshold": null
+        }
+      ]
+    }
+  ],
+  "meters": [
+    {
+      "customer": "acme",
+      "id": "M-1",
+      "max_kwh_per_hour": 100,
+      "modulus": 100000
+    },
+    {
+      "customer": "beta",
+      "id": "M-2",
+      "max_kwh_per_hour": 10,
+      "modulus": 1000
+    }
+  ],
+  "rates": [
+    {
+      "date": "2025-12-31",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-01-01",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-01-02",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-01-03",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-01-04",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-01-05",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-01-06",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-01-07",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-01-08",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-01-09",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-01-10",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-01-11",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-01-12",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-01-13",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-01-14",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-01-15",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-01-16",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-01-17",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-01-18",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-01-19",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-01-20",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-01-21",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-01-22",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-01-23",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-01-24",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-01-25",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-01-26",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-01-27",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-01-28",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-01-29",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-01-30",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-01-31",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-02-01",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-02-02",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-02-03",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-02-04",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-02-05",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-02-06",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-02-07",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-02-08",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-02-09",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-02-10",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-02-11",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-02-12",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-02-13",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-02-14",
+      "segments": [
+        {
+          "cents_per_kwh": 4,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 12,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 7,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-02-15",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-02-16",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-02-17",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-02-18",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-02-19",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-02-20",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-02-21",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-02-22",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-02-23",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-02-24",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-02-25",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-02-26",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-02-27",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-02-28",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-03-01",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    },
+    {
+      "date": "2026-03-02",
+      "segments": [
+        {
+          "cents_per_kwh": 5,
+          "end_minute": 360,
+          "start_minute": 0
+        },
+        {
+          "cents_per_kwh": 15,
+          "end_minute": 1080,
+          "start_minute": 360
+        },
+        {
+          "cents_per_kwh": 8,
+          "end_minute": 1440,
+          "start_minute": 1080
+        }
+      ]
+    }
+  ],
+  "readings": [
+    {
+      "at": "2025-12-31T23:00Z",
+      "meter": "M-1",
+      "register": 0
+    },
+    {
+      "at": "2026-01-31T00:00Z",
+      "meter": "M-1",
+      "register": 300
+    },
+    {
+      "at": "2026-02-15T12:00Z",
+      "meter": "M-1",
+      "register": 1500
+    },
+    {
+      "at": "2026-03-02T00:00Z",
+      "meter": "M-1",
+      "register": 2800
+    },
+    {
+      "at": "2026-01-31T00:00Z",
+      "meter": "M-1",
+      "register": 300
+    },
+    {
+      "at": "2026-01-01T00:00Z",
+      "meter": "M-2",
+      "register": 950
+    },
+    {
+      "at": "2026-01-10T00:00Z",
+      "meter": "M-2",
+      "register": 120
+    },
+    {
+      "at": "2026-01-31T00:00Z",
+      "meter": "M-2",
+      "register": 400
+    }
+  ]
+}
