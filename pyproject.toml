@@ -13,5 +13,6 @@ water-rights-network = "water_rights.network_cli:main"
 water-rights-billing = "water_rights.billing_cli:main"
 water-rights-quality = "water_rights.quality_cli:main"
 water-rights-permits = "water_rights.permit_collect:main"
+water-rights-terrain = "water_rights.terrain_cli:main"
 [tool.setuptools.packages.find]
 where = ["src"]

@@ -10,3 +10,6 @@ quality_config.json / quality_changes.jsonl / quality_corrections.jsonl / qualit
 permit_site/ 为取水许可证公告采集器的自制源站样例（分页公告、详情、RFC4180 配额 CSV、
 同源重定向与 BOM/引号字段），全部为原创虚构合成数据，仅用于本地标准库 HTTP 服务演示，
 不对应任何真实网站或账号。
+
+terrain_input.json 为地形排水空间底图样例（5x5 同形高程/降雨栅格、三处不可通行掩膜、
+双出口、一个内部洼地需 10 mm 填洼），全部为原创虚构合成数据。

@@ -108,6 +108,25 @@ rowspan/colspan 逻辑矩形并按叶标题取三列，permit_csv.py 以整数�
 不重复配额，且已发布报告始终能凭库内原始字节离线复核。业务错误退出 2 并保留旧报告
 与全部证据，成功回执含数据集身份与出口数。
 
+## 地形排水空间底图（terrain_cli）
+
+独立的地形与降雨数据产品，把数字高程栅格转为可逐格复算的填洼高程、等 H 平台导流、
+出口汇水分区与精确整数径流/填洼体积，为后续系统提供排水空间底图。它不读取网络调度、
+计费、水质仓或许可采集状态，不连接外部服务，也不新增持久账本，详见
+[地形排水空间底图契约](docs/terrain_contract.md)。
+
+```sh
+python -m water_rights.terrain_cli \
+  --source fixtures/terrain_input.json --output run/terrain_report.json
+```
+
+terrain_model.py 为受限栅格契约（同形矩形、掩膜双 null、拒绝布尔/浮点/重复键/额外
+字段/参差矩形），terrain_analysis.py 以一次堆松弛求每格最小极大路径填洼高程 H
+（O(N log N)，不逐高程单位抬升、不枚举路径），再以固定字典序的平台多源 BFS 确定
+无环接收链，并以非递归反向累计保证逐格与逐出口的降雨、面积、填洼体积守恒；全程整数
+精确、无时间戳与随机值、同输入字节一致。业务错误退出 2 且保留旧报告，输入输出不得
+同路径、拒绝符号链接输出。
+
 ## Scope and sample
 # Priority water-right allocation v1
 
