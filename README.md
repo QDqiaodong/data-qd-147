@@ -83,6 +83,31 @@ quality_model.py 为受限配置与 JSONL 变更契约（`[n,d]` 有理数、实
 共同已知域、超标并集、解析积分、全仓告警、原子提交与重放），quality_cli.py 衔接
 命令行。业务错误退出2并保留既有报告与仓，`init` 拒绝覆盖。
 
+## 取水许可证公告采集器（permit_collect）
+
+独立的“取水许可证公告采集器”，仅用标准库把分页公告、许可详情与月配额 CSV 采集为
+可离线复核的数据集。一个 SQLite 文件即绑定入口 URL 的采集器身份，持久保存原始响应
+正文、请求/最终 URL、ETag、快照标识与 SHA256；只处理公开许可的声明配额，不接触
+配给交割、计费与水质仓，详见[取水许可证公告采集契约](docs/permit_contract.md)。
+
+```sh
+# 终端 1：自制源站（标准库 ThreadingHTTPServer，无需真实网站或账号）
+python3 -m water_rights.permit_demo --root fixtures/permit_site --snapshot G1 --port 8080
+# 终端 2：采集与离线复核
+PYTHONPATH=src python3 -m water_rights.permit_collect \
+  --index http://127.0.0.1:8080/announce/ --state run/permits.db --output run/permits.json
+PYTHONPATH=src python3 -m water_rights.permit_collect \
+  --index http://127.0.0.1:8080/announce/ --state run/permits.db --output run/permits.json verify
+```
+
+每轮先复验首页得到快照 G，其后请求均带 `X-Expected-Snapshot: G`；304 仅在同 URL、
+同 G 且本地 SHA 核验通过时复用，缓存损坏则无条件重下。permit_html.py 严格恢复
+rowspan/colspan 逻辑矩形并按叶标题取三列，permit_csv.py 以整数升精确换算并校验
+年度守恒，permit_http.py 强制同源重定向（≤3 跳、无 userinfo），permit_store.py
+以 `candidate→published→superseded` 状态机和原子发布指针保证中断恢复不丢出口、
+不重复配额，且已发布报告始终能凭库内原始字节离线复核。业务错误退出 2 并保留旧报告
+与全部证据，成功回执含数据集身份与出口数。
+
 ## Scope and sample
 # Priority water-right allocation v1
 
