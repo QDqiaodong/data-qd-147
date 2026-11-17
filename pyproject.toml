@@ -11,5 +11,6 @@ dependencies = []
 water-rights = "water_rights.cli:main"
 water-rights-network = "water_rights.network_cli:main"
 water-rights-billing = "water_rights.billing_cli:main"
+water-rights-quality = "water_rights.quality_cli:main"
 [tool.setuptools.packages.find]
 where = ["src"]

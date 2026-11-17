@@ -1,0 +1,21 @@
+{
+  "start": 1767225600,
+  "end": 1767398400,
+  "stations": [
+    {
+      "id": "river-a",
+      "min_episode_seconds": 3600,
+      "analytes": [
+        {"id": "nitrate", "threshold": [10, 1], "max_gap_seconds": 21600},
+        {"id": "turbidity", "threshold": [5, 1], "max_gap_seconds": 21600}
+      ]
+    },
+    {
+      "id": "well-b",
+      "min_episode_seconds": 7200,
+      "analytes": [
+        {"id": "arsenic", "threshold": [3, 100], "max_gap_seconds": 86400}
+      ]
+    }
+  ]
+}

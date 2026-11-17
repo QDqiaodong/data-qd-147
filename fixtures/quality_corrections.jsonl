@@ -1,0 +1,2 @@
+{"seq":21,"kind":"observation","id":"turb-2","revision":2,"deleted":false,"payload":{"station":"river-a","analyte":"turbidity","at":1767301200,"value":[3,1]}}
+{"seq":22,"kind":"calibration","id":"nit-mid","revision":2,"deleted":true,"payload":null}

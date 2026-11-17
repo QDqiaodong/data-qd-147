@@ -62,6 +62,27 @@ billing_audit.py 在层状容量族的整数多拟阵基多面体上做边际贪
 周期阶梯量与分时收费；billing_cli.py 衔接命令行。无可行分配或契约违规时退出2且
 保留旧报告，输入输出不得相同、拒绝符号链接输出。
 
+## 水质连续暴露数据仓（quality_cli）
+
+独立的“水质连续暴露数据仓”，把可迟到更正的瞬时浓度观测与实验室校准变更流，
+转为持久化的已知覆盖、超标暴露及告警区间。它以单个 SQLite 文件为一个配置冻结的
+新仓，不读取配给、交割、表位或费率数据，详见
+[水质连续暴露数据契约](docs/quality_contract.md)。
+
+```sh
+.venv/bin/python -m water_rights.quality_cli init --source fixtures/quality_config.json --db run/quality.db
+.venv/bin/python -m water_rights.quality_cli ingest --source fixtures/quality_changes.jsonl --db run/quality.db
+.venv/bin/python -m water_rights.quality_cli ingest --source fixtures/quality_corrections.jsonl --db run/quality.db
+.venv/bin/python -m water_rights.quality_cli ingest --source fixtures/quality_restore.jsonl --db run/quality.db
+.venv/bin/python -m water_rights.quality_cli report --db run/quality.db \
+    --start 1767225600 --end 1767398400 --output run/quality_report.json
+```
+
+quality_model.py 为受限配置与 JSONL 变更契约（`[n,d]` 有理数、实体修订、最终态
+冲突），quality_warehouse.py 为 SQLite 事实仓与精确片段化物化（插值、校准、
+共同已知域、超标并集、解析积分、全仓告警、原子提交与重放），quality_cli.py 衔接
+命令行。业务错误退出2并保留既有报告与仓，`init` 拒绝覆盖。
+
 ## Scope and sample
 # Priority water-right allocation v1
 
